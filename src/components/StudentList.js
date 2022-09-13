@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { Card, Container, Table, ButtonGroup, Button } from "react-bootstrap";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,7 +40,7 @@ export default function StudentList() {
                 </tr>
               ) : (
                 students.map((student)=>
-                <tr>
+                <tr key={student.id}>
                   <td>{student.id}</td>
                   <td>{student.name}</td>
                   <td>{student.address}</td>
